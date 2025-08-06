@@ -1,154 +1,98 @@
-Berikut adalah file `README.md` lengkap untuk GitHub repository Laravel + OpenAI milik Anda, sesuai teknologi yang Anda pakai (Laravel + Vue.js + Vite + Bootstrap + MySQL) dan fitur API yang digunakan:
+# 🤖 Laravel + OpenAI Integration
+
+Proyek ini adalah integrasi Laravel + Vue.js (Vite) dengan berbagai fitur dari **OpenAI API**, termasuk:
+
+- **Assistants API**: untuk membangun asisten AI yang dapat berdialog dan menggunakan tools seperti file retrieval.
+- **Vector Store API**: untuk menyimpan dan mencari vektor embedding dari teks atau dokumen.
+- **Files API**: untuk mengunggah file yang digunakan oleh Assistant.
+- **Embeddings API**: untuk menghasilkan representasi vektor dari teks.
+
+Proyek ini cocok digunakan untuk membangun chatbot, sistem tanya jawab dokumen, pencarian semantik, atau asisten cerdas internal.
 
 ---
 
-````md
-# 🤖 Laravel + OpenAI Integration (Assistants, Vector Store, Files, Embeddings)
+## ⚙️ Teknologi yang Digunakan
 
-Proyek ini adalah aplikasi Laravel + Vue.js (Vite) yang terintegrasi dengan berbagai fitur dari **OpenAI API**. Cocok untuk membangun sistem chatbot pintar, pencarian dokumen berbasis AI (RAG), manajemen file, dan interaksi multi-turn dengan Assistant.
-
----
-
-## 🚀 Fitur Utama
-
-- ✅ Integrasi penuh dengan OpenAI API:
-  - **Assistants API**: Buat asisten AI yang dapat berdialog dan menggunakan tools seperti retrieval.
-  - **Vector Store API**: Simpan dan cari vektor embedding dari dokumen untuk pencarian semantik.
-  - **Files API**: Upload dan kelola file untuk Assistant atau RAG.
-  - **Embeddings API**: Hasilkan representasi vektor dari teks.
-
-- ⚙️ Dibangun menggunakan:
-  - Laravel (PHP 8.2+)
-  - Vue.js 3 + Vite
-  - Bootstrap (tanpa Tailwind)
-  - MySQL sebagai database utama
-
-- 📚 Contoh fitur yang bisa dikembangkan:
-  - Chatbot berbasis file dokumen PDF
-  - Semantic search menggunakan vector store
-  - Customer service assistant dengan alur multithread
-  - Integrasi file upload ke Assistant
+- Laravel (PHP)
+- Vue.js 3 (dengan Vite)
+- Bootstrap 5
+- MySQL
+- OpenAI API
 
 ---
 
-## 📦 Instalasi & Setup
+## 🚀 Cara Menjalankan Proyek
 
-### 1. Clone Repository
+### 1. Clone repository ini:
 
 ```bash
-git clone https://github.com/username/nama-repo-anda.git
-cd nama-repo-anda
+git clone https://github.com/Calvinstp-102/Laravel-Vector-OpenAI.git
+cd Laravel-Vector-OpenAI
 ````
 
-### 2. Install Dependencies
+### 2. Install dependencies:
 
 ```bash
 composer install
 npm install
 ```
 
-### 3. Konfigurasi Environment
-
-Copy file `.env.example` ke `.env`:
+### 3. Salin dan konfigurasi file `.env`:
 
 ```bash
 cp .env.example .env
 ```
 
-Lalu buka `.env` dan perbarui:
+Lalu edit file `.env` dan isi variabel berikut:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
 ```
 
-Pastikan juga koneksi database MySQL Anda sudah diatur dengan benar di `.env`.
+Serta sesuaikan konfigurasi database MySQL Anda di bagian:
 
-### 4. Generate App Key
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=username
+DB_PASSWORD=password
+```
+
+### 4. Generate application key:
 
 ```bash
 php artisan key:generate
 ```
 
-### 5. Jalankan Aplikasi
+### 5. Jalankan server lokal:
 
 ```bash
 php artisan serve
 npm run dev
 ```
 
----
-
-## 🧪 Contoh API OpenAI yang Digunakan
-
-* `POST /v1/assistants`
-* `POST /v1/threads/{thread_id}/messages`
-* `POST /v1/vector_stores`
-* `POST /v1/files`
-* `POST /v1/embeddings`
+Aplikasi akan tersedia di `http://localhost:8000`
 
 ---
 
-## 📁 Struktur Direktori Utama
+## 📌 Catatan
 
-```
-├── app/
-│   └── Services/
-│       └── OpenAI/
-│           ├── AssistantService.php
-│           ├── FileService.php
-│           ├── VectorStoreService.php
-│           └── EmbeddingService.php
-├── resources/js/
-│   └── Components/
-│       └── ChatAssistant.vue
-├── routes/
-│   └── api.php
-├── .env
-├── vite.config.js
-```
+* Pastikan Anda memiliki akun OpenAI dan API key yang aktif.
+* Folder `vendor/`, `.env`, dan `node_modules/` tidak termasuk dalam repository (sesuai .gitignore).
+* Proyek ini tidak menggunakan Tailwind, hanya Bootstrap.
 
 ---
 
-## 🧠 Use-Case yang Bisa Dibuat
+## 📝 Lisensi
 
-* RAG (Retrieval-Augmented Generation)
-* AI Chatbot berbasis dokumen
-* Customer Support AI
-* Sistem Q\&A otomatis
-* Asisten AI untuk knowledge base perusahaan
-
----
-
-## 📌 Catatan Tambahan
-
-* Pastikan akun OpenAI Anda memiliki akses ke fitur Assistant API dan Vector Store.
-* Ukuran file dan limit rate tergantung pada plan OpenAI Anda.
-* Untuk dokumentasi resmi OpenAI: [https://platform.openai.com/docs](https://platform.openai.com/docs)
-
----
-
-## 🛠 Rencana Pengembangan Selanjutnya
-
-* [ ] Upload PDF & auto split menjadi chunks
-* [ ] Caching vector search lokal
-* [ ] Middleware autentikasi pengguna
-* [ ] UI chat lebih interaktif
-
----
-
-## 🧑‍💻 Kontribusi
-
-Pull Request terbuka untuk semua. Silakan fork, kembangkan, dan kirim PR ke branch `main`.
-
----
-
-## 📄 Lisensi
-
-MIT License © 2025 — Anda bebas menggunakan dan memodifikasi dengan atribusi.
+MIT License © 2025
+Anda bebas menggunakan, memodifikasi, dan menyebarkan proyek ini dengan atribusi yang sesuai.
 
 ```
 
 ---
 
-Jika Anda ingin saya bantu **menghasilkan file markdown siap download**, tinggal bilang saja. Saya juga bisa bantu generate struktur direktori default Laravel + Vue + Vite jika ingin disertakan.
+Kalau Anda ingin versi markdown ini saya simpankan sebagai file `README.md` siap upload ke GitHub, tinggal bilang saja — saya bisa bantu kirimkan file-nya juga.
 ```
