@@ -89,10 +89,3 @@ Aplikasi akan tersedia di `http://localhost:8000`
 
 MIT License © 2025
 Anda bebas menggunakan, memodifikasi, dan menyebarkan proyek ini dengan atribusi yang sesuai.
-
-```
-
----
-
-Kalau Anda ingin versi markdown ini saya simpankan sebagai file `README.md` siap upload ke GitHub, tinggal bilang saja — saya bisa bantu kirimkan file-nya juga.
-```
